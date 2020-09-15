@@ -1,6 +1,6 @@
 function dbConnect(){
     const mongoose = require('mongoose')
-    const url = 'mongodb+srv://varun:varun123@cluster0.sxxuv.mongodb.net/comments?retryWrites=true&w=majority'
+    const url = process.env.MONGO_URL || 'mongodb+srv://varun:varun123@cluster0.sxxuv.mongodb.net/comments?retryWrites=true&w=majority'
 
      mongoose.connect(url, {
          useNewUrlParser : true,
